@@ -1,0 +1,2 @@
+select customer_code, sold_quantity, rank() over(order by sold_quantity desc) as high_quant from fact_sales_monthly
+where sold_quantity <=10;
